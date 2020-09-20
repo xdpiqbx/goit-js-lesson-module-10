@@ -58,3 +58,6 @@
 //const marcup = itemsTemplate({ items: ['HTML', 'CSS', 'JS', 'React'] })
 //const marcup = itemsTemplate(['HTML', 'CSS', 'JS', 'React']) // чтоб это отработало в .hbs туда надо передать this
 //galleryRef.insertAdjacentHTML('beforeend', marcup)
+
+
+//https://youtu.be/N6DyJauZCmc?t=3465
