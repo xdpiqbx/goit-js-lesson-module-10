@@ -5,44 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Webpack Starter Kit</title>
-
-    <!-- Don't forget to delete this style tag. -->
-    <style>
-      body {
-        min-height: 100vh;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .intro {
-        text-align: center;
-      }
-
-      .intro h1 {
-        margin-top: 0;
-        font-weight: 500;
-        font-size: 40px;
-      }
-
-      .intro img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-      }
-    </style>
   </head>
 
   <body>
+<!-- 
     <article class="intro">
       <h1>Webpack starter kit</h1>
 
-      <!-- HTML image reference example. -->
+      HTML image reference example.
       <img src="./images/intro.png" alt="" width="640" />
     </article>
+-->
+<!-- 
     <section>
-      
+      <form class="feedback-form js-feedback-form">
+        <label>
+          <b>Name</b>
+          <input type="text" name="name" placeholder="Input your name" value="Anonimus">
+        </label>
+        <label>
+          <b>Message</b>
+          <textarea name="message" rows="6"></textarea>
+        </label>
+        <button type="submit">Feedback</button>
+      </form>
     </section>
+-->
+<!-- Если не пользоватся webpack, прийдётся писать так -->
+  <!--
+    <template id="list-item">
+      {{#each items}}
+        <li><a href="#">{{this}}</a></li>
+      {{/each}}
+      <li>{{label}}</li>
+    </template>
+  -->
+
+  <ul class="js-gallery"></ul>
+  
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw==" crossorigin="anonymous"></script> -->
+  <!--
+    <script>
+
+      const technologies = ['HTML', 'CSS', 'JS', 'React'];
+      const html = document.querySelector('#list-item').innerHTML.trim()
+      //console.log(html) // получил строку <li>{{label}}</li>
+      //Передаю полученую строку в Handlebars.compile
+      const template = Handlebars.compile(html) // Handlebars.compile - возвращает функцию шаблон
+            
+      //const marcup = template({label: 'HTML'}) // template - функция шаблон, принимает объект, вернёт шаблон - текст (разметку)
+      //console.log(marcup) // <li>HTML</li>
+      
+      const marcup = template({items: ['HTML', 'CSS', 'JS', 'React']}) // свойство items как контекст в шаблоне
+      const galleryRef = document.querySelector(".js-gallery")
+      galleryRef.insertAdjacentHTML('beforeend', marcup)
+      
+      // вот что примерно делает Handlebars.compile
+      // не надо этого писать самому !!!
+      // Handlebars.compile - возвращает функцию шаблон
+      // <li>{{label}}</li>
+      // function tpl(obj){
+      //   return '<li>' + obj.label +' </li>'      
+      // }
+    </script>
+  -->
   </body>
 </html>
